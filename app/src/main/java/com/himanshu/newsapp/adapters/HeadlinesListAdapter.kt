@@ -1,20 +1,18 @@
 package com.himanshu.newsapp.adapters
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.himanshu.newsapp.R
-import com.himanshu.newsapp.activities.ArticleActivity
 import com.himanshu.newsapp.dataModelClass.Article
+import com.himanshu.newsapp.interfaces.articleAdapterPosition
 
-class headlinesListAdapter(private val articles: List<Article>): RecyclerView.Adapter<headlinesListAdapter.ViewHolder> (){
+class HeadlinesListAdapter(private val articles: List<Article>,private val passPosition:articleAdapterPosition): RecyclerView.Adapter<HeadlinesListAdapter.ViewHolder> (){
 
     private lateinit var context: Context
 
@@ -42,8 +40,7 @@ class headlinesListAdapter(private val articles: List<Article>): RecyclerView.Ad
         bindingImage(holder,position)
         holder.description.text = articles[position].description
         holder.itemView.setOnClickListener {
-            val intent = Intent(context,ArticleActivity::class.java)
-            context.startActivity(intent)
+            passPosition.pass(position)
         }
     }
 

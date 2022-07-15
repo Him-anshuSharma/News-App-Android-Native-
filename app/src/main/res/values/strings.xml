@@ -2,4 +2,5 @@
     <string name="app_name">News App</string>
     <string name="headline">HEADLINE</string>
     <string name="content">CONTENT</string>
+    <string name="news_image">News Image</string>
 </resources>

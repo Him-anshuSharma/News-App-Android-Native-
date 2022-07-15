@@ -3,9 +3,11 @@
     <item
         android:id="@+id/news_feed"
         android:title="NEWS"
+        android:icon="@drawable/icon_news"
         />
     <item
         android:id="@+id/search"
         android:title="SEARCH"
+        android:icon="@drawable/icon_search"
         />
 </menu>

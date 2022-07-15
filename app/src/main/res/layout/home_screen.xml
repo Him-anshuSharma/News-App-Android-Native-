@@ -4,15 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7E7E7E"
+    android:background="#DFDDDD"
     android:orientation="vertical"
+    style="@style/Theme.Design.NoActionBar"
     tools:context=".activities.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/headlinesRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="1.5dp"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/home_screen_navigation_bar_menu"
+        android:layout_gravity="bottom"
+        app:labelVisibilityMode="selected"
+        android:background="#959595"
         />
 
 </LinearLayout>
