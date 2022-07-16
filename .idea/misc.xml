@@ -4,14 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Acer/Desktop/NewsApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.198" />
+        <entry key="..\:/Users/Acer/Desktop/NewsApp/app/src/main/res/drawable/icon_news.xml" value="0.195" />
+        <entry key="..\:/Users/Acer/Desktop/NewsApp/app/src/main/res/drawable/icon_search.xml" value="0.195" />
         <entry key="..\:/Users/Acer/Desktop/NewsApp/app/src/main/res/layout/activity_article.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/Acer/Desktop/NewsApp/app/src/main/res/layout/activity_web_view_article.xml" value="0.20052083333333334" />
-        <entry key="..\:/Users/Acer/Desktop/NewsApp/app/src/main/res/layout/home_screen.xml" value="0.35820894502642775" />
+        <entry key="..\:/Users/Acer/Desktop/NewsApp/app/src/main/res/layout/home_screen.xml" value="0.17910447251321387" />
         <entry key="..\:/Users/Acer/Desktop/NewsApp/app/src/main/res/layout/layout.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/Acer/Desktop/NewsApp/app/src/main/res/layout/news_card.xml" value="0.4799999863354132" />
         <entry key="..\:/Users/Acer/Desktop/NewsApp/app/src/main/res/layout/news_laout.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/Acer/Desktop/NewsApp/app/src/main/res/layout/news_layout.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Acer/Desktop/NewsApp/app/src/main/res/menu/app_bar.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/Acer/Desktop/NewsApp/app/src/main/res/menu/home_screen_navigation_bar_menu.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Acer/Desktop/NewsApp/app/src/main/res/menu/news_category_menu.xml" value="0.19947916666666668" />
       </map>
     </option>
   </component>

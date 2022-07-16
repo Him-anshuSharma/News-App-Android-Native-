@@ -2,28 +2,156 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.NewsApp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#DFDDDD"
     android:orientation="vertical"
-    style="@style/Theme.Design.NoActionBar"
     tools:context=".activities.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="#FFFFFF"
+        android:padding="8sp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/appTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/icon_news"
+                    android:drawablePadding="5sp"
+                    android:drawableTint="@color/black"
+                    android:padding="5sp"
+                    android:text="NEWS"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/headlineTextInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:hint="search for headline"
+                    android:inputType="textShortMessage"
+                    android:padding="5dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/searchNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_search"
+                    app:tint="@color/black" />
+            </LinearLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/news_category_menu"
+        >
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/Headlines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:text="Headlines"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/sports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:text="Sports"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/politics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:text="Politics"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/Technology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:text="Technology"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/headlinesRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_marginHorizontal="1.5dp"
-        />
+        android:layout_marginBottom="1dp"
+        android:layout_weight="1" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:menu="@menu/home_screen_navigation_bar_menu"
-        android:layout_gravity="bottom"
-        app:labelVisibilityMode="selected"
-        android:background="#959595"
-        />
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/currentCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#BFBFBF"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Headlines for today!"
+            android:textColor="#AE000000"
+            android:textSize="10sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
 
 </LinearLayout>

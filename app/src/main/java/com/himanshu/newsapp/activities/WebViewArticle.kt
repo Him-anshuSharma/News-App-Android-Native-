@@ -15,8 +15,6 @@ class WebViewArticle : AppCompatActivity() {
         binding = ActivityWebViewArticleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar!!.hide()
-
         var url: String = intent.getStringExtra("url").toString()
         binding.articleWebView.loadUrl(url)
     }
