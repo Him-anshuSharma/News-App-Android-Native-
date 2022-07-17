@@ -23,7 +23,7 @@ interface NewsAPInterface {
     @GET("top-headlines")
     suspend fun getPoliticsHeadlines(
         @Query("country")Country: String,
-        @Query("q")query: String,
+        @Query("category")category: String,
         @Query("apiKey") apiKey: String
     ): Response<HeadlinesResponseResult>
 

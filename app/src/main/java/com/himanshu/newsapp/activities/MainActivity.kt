@@ -109,14 +109,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         //Politics
-        binding.politics.setOnClickListener {
+        binding.business.setOnClickListener {
             category = "politics"
             binding.currentCategory.text = category
             lifecycleScope.launch {
                 try {
                     val headlines = retrofitInstance.api.getPoliticsHeadlines(
                         "in",
-                        "politics",
+                        "business",
                         "16d2ba05ce0644e0be6536b97767fed1"
                     )
                     updateArticles(headlines)
@@ -152,7 +152,7 @@ class MainActivity : AppCompatActivity() {
         //Toast.makeText(applicationContext,"Update article",Toast.LENGTH_LONG).show()
         articles.clear()
         articles = headlines.body()!!.articles.toMutableList()
-        if (!articles.isEmpty()) {
+        if (articles.isNotEmpty()) {
             setRecyclerView()
         }
     }
